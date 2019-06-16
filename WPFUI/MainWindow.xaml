@@ -7,14 +7,13 @@
         d:DataContext="{d:DesignInstance viewModels:GameSession}"
         mc:Ignorable="d"
         FontSize="11pt"
-        Title="Rogers's Awesome Game" Height="768" Width="1024">
+        Title="Scott's Awesome Game" Height="768" Width="1024">
 
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BooleanToVisibility" />
     </Window.Resources>
 
     <Grid>
-        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -61,7 +60,8 @@
         </Grid>
 
         <!-- Gameplay -->
-        <Grid Grid.Row="1" Grid.Column="1" Background="Beige">
+        <Grid Grid.Row="1" Grid.Column="1"
+              Background="Beige">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -72,13 +72,30 @@
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
 
+            <!-- Game Messages -->
+            <Border Grid.Row="0" Grid.Column="0"
+                    Grid.RowSpan="2"
+                    BorderBrush="Gainsboro"
+                    BorderThickness="1">
+
+                <RichTextBox x:Name="GameMessages"
+                             Background="Beige"
+                             VerticalScrollBarVisibility="Auto">
+                    <RichTextBox.Resources>
+                        <Style TargetType="{x:Type Paragraph}">
+                            <Setter Property="Margin" Value="0"/>
+                        </Style>
+                    </RichTextBox.Resources>
+                </RichTextBox>
+
+            </Border>
+
             <!-- Location information -->
             <Border Grid.Row="0" Grid.Column="1"
                     BorderBrush="Gainsboro"
                     BorderThickness="1">
 
                 <Grid Margin="3">
-                    
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="*"/>
@@ -177,6 +194,7 @@
                     </DataGrid>
                 </TabItem>
             </TabControl>
+            
         </Grid>
 
         <!-- Action controls -->
@@ -192,6 +210,7 @@
                 <ColumnDefinition Width="255" />
             </Grid.ColumnDefinitions>
 
+            <!-- Movement Controls -->
             <Grid Grid.Row="0" Grid.Column="1">
 
                 <Grid.RowDefinitions>
