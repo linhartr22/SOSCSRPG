@@ -23,9 +23,9 @@ namespace Engine.Factories
             _standardGameItems.Add(new GameItem(9006, "Spider Silk", 2));
         }
 
-        public static GameItem CreateGameItem(int itemTypeId)
+        public static GameItem CreateGameItem(int itemTypeID)
         {
-            GameItem standardItem = _standardGameItems.FirstOrDefault(item => item.ItemTypeId == itemTypeId);
+            GameItem standardItem = _standardGameItems.FirstOrDefault(item => item.ItemTypeID == itemTypeID);
 
             if (standardItem != null)
             {
