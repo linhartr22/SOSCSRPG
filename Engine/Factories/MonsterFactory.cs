@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Engine.Models;
 
 namespace Engine.Factories
@@ -24,7 +20,7 @@ namespace Engine.Factories
 
                 case 2:
                     Monster rat =
-                        new Monster("Rat", "Rat.png", 5, 5, 1, 1, 5, 1);
+                        new Monster("Rat", "Rat.png", 5, 5, 1, 2, 5, 1);
 
                     AddLootItem(rat, 9003, 25);
                     AddLootItem(rat, 9004, 75);
@@ -32,8 +28,8 @@ namespace Engine.Factories
                     return rat;
 
                 case 3:
-                    Monster giantSpider = 
-                        new Monster("Giant Spider", "GiantSpider.png", 10, 10, 2, 4, 10, 3);
+                    Monster giantSpider =
+                        new Monster("Giant Spider", "GiantSpider.png", 10, 10, 1, 4, 10, 3);
 
                     AddLootItem(giantSpider, 9005, 25);
                     AddLootItem(giantSpider, 9006, 75);
@@ -42,7 +38,6 @@ namespace Engine.Factories
 
                 default:
                     throw new ArgumentException(string.Format("MonsterType '{0}' does not exist", monsterID));
-
             }
         }
 
@@ -50,7 +45,7 @@ namespace Engine.Factories
         {
             if (RandomNumberGenerator.NumberBetween(1, 100) <= percentage)
             {
-                monster.Inventory.Add(new ItemQuantity(itemID, 1));
+                monster.AddItemToInventory(ItemFactory.CreateGameItem(itemID));
             }
         }
     }
