@@ -1,7 +1,7 @@
-﻿using System.Windows;
-using System.Windows.Documents;
-using Engine.EventArgs;
+﻿using Engine.EventArgs;
 using Engine.ViewModels;
+using System.Windows;
+using System.Windows.Documents;
 
 namespace WPFUI
 {

@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Engine.Models
+﻿namespace Engine.Models
 {
     public class Weapon : GameItem
     {
         public int MinimumDamage { get; set; }
         public int MaximumDamage { get; set; }
-        public Weapon(int itemTypeId, string name, int price, int minDamage, int maxDamage) : base(itemTypeId,name,price)
+
+        public Weapon(int itemTypeID, string name, int price, int minDamage, int maxDamage)
+            : base(itemTypeID, name, price, true)
         {
             MinimumDamage = minDamage;
             MaximumDamage = maxDamage;

@@ -1,8 +1,8 @@
-﻿using System;
-using System.Linq;
-using Engine.EventArgs;
+﻿using Engine.EventArgs;
 using Engine.Factories;
 using Engine.Models;
+using System;
+using System.Linq;
 
 namespace Engine.ViewModels
 {
