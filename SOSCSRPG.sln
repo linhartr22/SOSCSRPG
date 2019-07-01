@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFUI", "WPFUI\WPFUI.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{11D8651E-4ABC-4702-9B97-DD8C85CD2DD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestEngine", "TestEngine\TestEngine.csproj", "{96C88E2B-B212-4885-8E2B-B239161E6058}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{11D8651E-4ABC-4702-9B97-DD8C85CD2DD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{11D8651E-4ABC-4702-9B97-DD8C85CD2DD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{11D8651E-4ABC-4702-9B97-DD8C85CD2DD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96C88E2B-B212-4885-8E2B-B239161E6058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96C88E2B-B212-4885-8E2B-B239161E6058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96C88E2B-B212-4885-8E2B-B239161E6058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96C88E2B-B212-4885-8E2B-B239161E6058}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
