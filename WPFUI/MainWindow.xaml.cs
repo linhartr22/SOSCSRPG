@@ -1,7 +1,7 @@
-﻿using Engine.EventArgs;
-using Engine.ViewModels;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Documents;
+using Engine.EventArgs;
+using Engine.ViewModels;
 
 namespace WPFUI
 {
@@ -44,6 +44,11 @@ namespace WPFUI
         private void OnClick_AttackMonster(object sender, RoutedEventArgs e)
         {
             _gameSession.AttackCurrentMonster();
+        }
+
+        private void OnClick_UseCurrentConsumable(object sender, RoutedEventArgs e)
+        {
+            _gameSession.UseCurrentConsumable();
         }
 
         private void OnGameMessageRaised(object sender, GameMessageEventArgs e)
